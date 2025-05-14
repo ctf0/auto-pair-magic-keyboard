@@ -41,4 +41,4 @@ however the triggers can still be executed manually for both `win & mac`
 
 for security reasons, the keyboard needs to be paired to windows using a code on first time, 
 so unfortently you will have to do it manually using the "Bluetooth > add device",
-and afterwards the automation will work as expected as long as you are still in the same session "no restart/shutdown".
+but to get around that, make sure to follow this [steps](https://superuser.com/a/1742818/864280)
