@@ -18,6 +18,7 @@ however the triggers can still be executed manually for both `win & mac`
 
 - install https://bluetoothinstaller.com/bluetooth-command-line-tools
 - download https://usbdeview.com/
+- follow this [steps](https://superuser.com/a/1742818/864280)
 - open `cmd` or `powershell` & run `btdiscovery -s` to get (service UUID & MAC_ADD)
 - update the (batch + script files) [here](win) with the correct info you got from previous step
 - next to automate script running via Task Scheduler
@@ -39,6 +40,5 @@ however the triggers can still be executed manually for both `win & mac`
 
 ### PS:
 
-for security reasons, the keyboard needs to be paired to windows using a code on first time, 
-so unfortently you will have to do it manually using the "Bluetooth > add device",
-but to get around that, make sure to follow this [steps](https://superuser.com/a/1742818/864280)
+for security reasons, the keyboard needs to be paired to windows using a code on first time,  
+so unfortently you will have to do it manually using the "Bluetooth > add device" after login.
