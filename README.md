@@ -17,18 +17,17 @@ however the triggers can still be executed manually for both `win & mac`
 # Win:
 
 - install https://bluetoothinstaller.com/bluetooth-command-line-tools
-- use `btdiscovery -s` to get (service UUID & MAC_ADD)
-- create 2 batch files with the cmnds to pair/unpair the keyboard
-- {{batch files here + watcher script}}
-
-- run on login via Task Scheduler
+- download https://usbdeview.com/
+- open `cmd` or `powershell` & run `btdiscovery -s` to get (service UUID & MAC_ADD)
+- update the (batch + script files) [here](win) with the correct info you got from previous step
+- next to automate script running via Task Scheduler
     - Open Task Scheduler
     - Create Basic Task :
-  Name: USB Watcher
-  Trigger: When I log on
-  Action: Start a Program
-  Program/script: `powershell.exe`
-  Add arguments: `-WindowStyle Hidden -ExecutionPolicy Bypass -File "C:\Tools\usb_watcher.ps1"`
+        - Name: USB Watcher
+        - Trigger: When I log on
+        - Action: Start a Program
+        - Program/script: `powershell.exe`
+            - Add arguments: `-WindowStyle Hidden -ExecutionPolicy Bypass -File "path\to\UsbHubWatcher.ps1"`
     - Finish, then open the task properties:
         - Go to the General tab
             - Check `Run with highest privileges`
@@ -37,3 +36,9 @@ however the triggers can still be executed manually for both `win & mac`
         - In the Settings tab, make sure:
             - "Allow task to be run on demand" is enable
             - "Stop the task if it runs longer than..." → unchecked (or extended)
+
+### PS:
+
+for security reasons, the keyboard needs to be paired to windows using a code on first time, 
+so unfortently you will have to do it manually using the "Bluetooth > add device",
+and afterwards the automation will work as expected as long as you are still in the same session "no restart/shutdown".
