@@ -19,8 +19,13 @@ however the triggers can still be executed manually for both `win & mac`
 - install https://bluetoothinstaller.com/bluetooth-command-line-tools
 - download https://usbdeview.com/
 - follow this [steps](https://superuser.com/a/1742818/864280)
-- open `cmd` or `powershell` & run `btdiscovery -s` to get (service UUID & MAC_ADD)
+- open `cmd` or `powershell` & run `btdiscovery -s` to get (Service_UUID & MAC_ADD)
 - update the (batch + script files) [here](win) with the correct info you got from previous step
+- open `Task Scheduler` & import files [here](win/Task%20Scheduler)
+- now we have
+  - on login (use manual way "BT > add device")
+  - on restart/shutdown (pairing will be removed)
+  - on usb hub conn/disconn "during same session" (pair/unpair & connection)
 
 ### PS:
 
